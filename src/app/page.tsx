@@ -183,7 +183,7 @@
 
 import React, { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Filter, ArrowRight, Star } from "lucide-react";
+import { Search, ArrowRight, Star } from "lucide-react";
 import { AccordionDemo } from "@/components/accordion-demo";
 import { AlertDialogDemo } from "@/components/alert.demo";
 import { CalendarDemo } from "@/components/calender";
