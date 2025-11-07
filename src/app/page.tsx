@@ -181,7 +181,7 @@
 
   "use client"
 
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, ReactNode } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, ArrowRight, Star } from "lucide-react";
 import { AccordionDemo } from "@/components/accordion-demo";
@@ -207,9 +207,14 @@ import { SwitchForm } from "@/components/switchdemo";
 import { TableDemo } from "@/components/tabledemo";
 import { TabsDemo } from "@/components/tabsdemo";
 
+interface DemoCardProps {
+  title: string;
+  children: ReactNode;
+  accent?: string;
+}
 
 // Small, reusable demo card with glassmorphism + subtle gradient accent
-function DemoCard({ title, children, accent = "from-indigo-500 to-pink-500" }) {
+function DemoCard({ title, children, accent = "from-indigo-500 to-pink-500" }: DemoCardProps) {
   return (
     <motion.article
       layout
